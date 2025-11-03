@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #fafafa;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 16px auto;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.gallery li {
+    flex: 1 1 calc((100% - 32px) / 3);
+    max-width: calc((100% - 32px) / 3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery li:hover {
+    transform: scale(1.03);
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
